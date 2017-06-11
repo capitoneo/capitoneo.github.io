@@ -1,0 +1,7 @@
+.userdata {
+    font-weight: bold;
+}
+.content>div {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
