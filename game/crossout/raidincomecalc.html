@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Crossout Raid Income Calculator</title>
+    <link rel="stylesheet" href="/style/bootstrap.css" />
+    <link rel="stylesheet" href="/style/styles.css" />
+    <script src="/script/jquery-3.1.1.js"></script>
+    <script src="/script/bootstrap.js"></script>
+    <script src="/script/script.js"></script>
+    <style>
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .well {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-header">
+                <h2>Crossout: калькулятор прибыли в рейдах</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <form id="raidcalc">
+            <div class="col-sm-4">
+                <h3>Рынок</h3>
+                <div class="input-group">
+                    <span class="input-group-addon">цена на бенз</span>
+                    <input id="raidcalc_benz_cost" type="text" class="form-control" placeholder="20.00">
+                    <span class="input-group-addon">x100</span>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">цена на медь</span>
+                    <input id="raidcalc_copper_cost" type="text" class="form-control" placeholder="7.00">
+                    <span class="input-group-addon">x10</span>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h3>Рейд</h3>
+                <div class="input-group">
+                    <span class="input-group-addon">Расход</span>
+                    <input id="raidcalc_benz_amount" type="text" class="form-control" placeholder="40">
+                    <span class="input-group-addon">ед. бензина</span>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Награда</span>
+                    <input id="raidcalc_copper_amount" type="text" class="form-control" placeholder="55">
+                    <span class="input-group-addon">ед. меди</span>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h3>Выгода</h3>
+                <div id="raidcalc_result" class="well well-sm"></div>
+                <p class="help-block">с учетом 10% комиссии рынка</p>
+            </div>
+        </form>
+    </div>
+    <script>
+        $(document).ready(initRaidcalc);
+
+        function initRaidcalc() {
+            // set local data if doesn't exist
+            if(!localStorage.getItem('raidcalcData')) {
+                saveRaidcalcData(20, 100, 8, 80)
+            }
+
+            // load local data
+            if (localStorage) {
+                var data = JSON.parse(localStorage.getItem('raidcalcData'));
+                $('#raidcalc_benz_cost').val(data.benzCost);
+                $('#raidcalc_benz_amount').val(data.benzAmount);
+                $('#raidcalc_copper_cost').val(data.copperCost);
+                $('#raidcalc_copper_amount').val(data.copperAmount);
+                $('#raidcalc_result').text(funcRaidcalc(data.benzCost, data.benzAmount, data.copperCost, data.copperAmount));
+            }
+
+            $('#raidcalc input').keyup(procRaidcalc);
+        }
+
+        function procRaidcalc() {
+            var benzCost, benzAmount, copperCost, copperAmount;
+            benzCost = $('#raidcalc_benz_cost').val();
+            benzAmount = $('#raidcalc_benz_amount').val();
+            copperCost = $('#raidcalc_copper_cost').val();
+            copperAmount = $('#raidcalc_copper_amount').val();
+            $('#raidcalc_result').text(funcRaidcalc(benzCost, benzAmount, copperCost, copperAmount));
+            saveRaidcalcData(benzCost, benzAmount, copperCost, copperAmount);
+        }
+
+        function funcRaidcalc(benzCost, benzAmount, copperCost, copperAmount) {
+            return Math.round( ( (copperAmount * copperCost * 0.09) - (benzCost * benzAmount / 100) ) * 100) / 100;
+        }
+
+        function saveRaidcalcData(benzCost, benzAmount, copperCost, copperAmount) {
+            var data = {
+                benzCost: benzCost,
+                benzAmount: benzAmount,
+                copperCost: copperCost,
+                copperAmount: copperAmount
+            }
+            localStorage.setItem('raidcalcData', JSON.stringify(data));
+        }
+    </script>
+</div>
+</body>
+</html>
