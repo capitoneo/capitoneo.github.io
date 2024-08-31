@@ -1,0 +1,36 @@
+id	questName	itemName	fileName	locX	locY	trader
+1	Smoke and Mirrors	20 Pack of Cigarettes	smoke-and-mirrors.png	45	17	Mark
+2	Probing The Unknown	Alien Matter Probe	probing-the-unknown.png	34	72	
+3	Air Quality Control	Atmospheric Analyzer	air-quality-control.png	65	83	
+4	Explosive Retrieval	Bomb	explosive-retrieval.png	19	79	Taras
+5	Liquid Gold	Bottle of Expensive Alcohol	liquid-gold.png	80	32	
+6	Power Play	Broken Backup Power Controller Device	power-play.png	0	0	
+7	Communication Hub	Radio-Comm Station	communication-hub.png	0	0	
+8	Confidential Retrieval	Classified Documents	confidential-retrieval.png	28	32	
+9	Silent Communication	Comm-Link Headset	silent-communication.png	45.5	85	
+10	Glimmering Gem	Crystal	glimmering-gem.png	85	42	Isabella
+11	Power Source	Energy Cell	power-source2.png	48	18	
+12	Lost Footage	Experiment Film Container	lost-footage.png	31	76	
+13	Planet with Name	Glass Planet	planet-with-name.png	30	29	
+14	Golden Opportunity	Gold Bar	golden-opportunity.png	50.5	56.5	
+15	Explosive Blueprint	Grenade Blueprint	explosive-blueprint.png	60	36	
+16	Doghowl Trophy	Howling Dog Statue	doghowl-trophy.png	89	54	
+17	Pattern Analysis	Key with Unique Patterns	pattern-analysis.png	62	14	Isabella
+18	Locker Key	Locker Key	locker-key.png	22	15	
+19	Prestigious Award	Next Fest #2 Award	prestigious-award.png	58.5	65	Mark
+20	Lucky Cap	Orange Hat	lucky-cap.png	76	21	
+21	Personal Insights	Personal Log Device	personal-insights.png	70.5	40	
+22	Hidden Data	Piggy Bank	hidden-data.png	86	19	
+23	Radiation Analysis	Radiation Analyzer	radiation-analysis.png	84	18	
+24	Clear Signal	Radio-Comm Device	clear-signal.png	33	23	
+25	Secrets In Red	Red Diary	secrets-in-red.png	46	41	
+26	Identity Band	Researcher's Wristband	identity-band.png	23	51	
+27	Safe Key	Safe Key	safe-key.png	43	65	
+28	Newer Horizons	Secret Weapon Blueprint	newer-horizons.png	71	41	Taras
+29	Hidden Secrets	Server Drive	hidden-secrets.png	42	52	Rafael
+30	Power Source	Solar Charger	power-source.png	31	51	Magnus
+31	Eyes Everywhere	Surveillance Box	eyes-everywhere.png	45	77	Rafael
+32	Night Vision	Thermal Imaging Goggles	night-vision.png	60	59	
+33	Echoes of the Unknown	Analog Data Tape	echoes-of-the-unknown.png	58	61	
+34	Temporal Schematics	Time Machine Blueprints	temporal-schematics.png	38	38	Magnus
+35	Secret Documents	Classified Pappers	secret-documents.png	0	0	
