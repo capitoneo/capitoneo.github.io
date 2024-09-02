@@ -249,7 +249,6 @@ input[type="checkbox"] {
 .room {
     position: absolute;
     font-size: .6vw;
-/*    width: 3%;*/
     text-align: center;
     text-align-last: center;
 }
@@ -278,9 +277,70 @@ input[type="checkbox"] {
         font-size: 3.2vw;
     }
 }
+/* rooms & location names */
+.warehouse {
+    top: 4%;
+    left: 74.5%;
+}
+.surface-elevator {
+    top: 15%;
+    left: 20%;
+}
+.canyon {
+    top: 16.5%;
+    left: 41%;
+}
+.garage {
+    top: 18%;
+    left: 66%;
+}
+.ne-cave-hall {
+    top: 17%;
+    left: 70%;
+}
+.glass-dome {
+    top: 26.5%;
+    left: 23.5%;
+}
+.tunnel-bore {
+    top: 74%;
+    left: 75%;
+}
+.sector-a-bridge {
+    top: 75%;
+    left: 46%;
+}
+.sector-c-hall {
+    top: 32.5%;
+    left: 73%;
+}
+.collapsed-tunnel {
+    top: 45%;
+    left: 17%;
+}
+.east-cavern {
+    top: 55.5%;
+    left: 84.5%;
+}
+.infected-cave {
+    top: 79.7%;
+    left: 18%;
+}
+.nest {
+    top: 85%;
+    left: 2%;
+}
 .well {
     top: 37.5%;
     left: 37.5%;
+}
+.research-room {
+    top: 40%;
+    left: 42.5%;
+}
+.server-room {
+    top: 52%;
+    left: 41.6%;
 }
 .warehouse-c1 {
     top: 35%;
@@ -294,7 +354,11 @@ input[type="checkbox"] {
     top: 39%;
     left: 68%;
 }
-.server-room {
-    top: 52%;
-    left: 41.6%;
+.warehouse-a1 {
+    top: 56%;
+    left: 47%;
+}
+.warehouse-a2 {
+    top: 53%;
+    left: 61%;
 }
