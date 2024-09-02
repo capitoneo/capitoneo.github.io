@@ -1,22 +1,16 @@
 function parseTsv(tsv) {
-    const QUEST = {
-        ID: 0,
-        NAME: 1,
-        ITEM: 2,
-        IMAGE: 3,
-        X: 4,
-        Y: 5,
-        TRADER: 6
-    }
+    return tsv.split('\n').slice(1).map((e) => e.split('\t')).map(parseQuest);
+}
 
-    return tsv.split('\n').slice(1).map((e) => e.split('\t'))
-        .map((e) => Object.assign({}, {
-            "id": e[QUEST.ID],
-            "questName": e[QUEST.NAME],
-            "itemName": e[QUEST.ITEM],
-            "fileName": e[QUEST.IMAGE],
-            "locX": e[QUEST.X],
-            "locY": e[QUEST.Y]}));
+function parseQuest(questEntry) {
+    return {
+        "id": questEntry[0],
+        "questName": questEntry[1],
+        "itemName": questEntry[2],
+        "fileName": questEntry[3],
+        "locX": questEntry[4],
+        "locY": questEntry[5]
+        };
 }
 
 const controlsParent = document.querySelector('#controls');
@@ -99,9 +93,9 @@ function searchFunction() {
         }
     }
 }
+
 function mapClear() {
     const activeItems = document.querySelectorAll(".active");
-    console.log('activeItems', activeItems);
     for (let i = 0; i < activeItems.length; i++) {
         activeItems[i].classList.remove("active");
     }
@@ -110,9 +104,7 @@ function mapClear() {
 var tsvXhttp = new XMLHttpRequest();
 tsvXhttp.onreadystatechange = function() {
         if (tsvXhttp.readyState == 4 && tsvXhttp.status == 200) {
-                let response = tsvXhttp.responseText.trim();
-                let questList = parseTsv(response);
-                genData(questList);
+                genData(parseTsv(tsvXhttp.responseText.trim()));
         };
 };
 tsvXhttp.open("GET", "./turion.tsv", true);
