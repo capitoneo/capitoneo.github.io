@@ -1,32 +1,134 @@
 <!DOCTYPE html>
-<html lang="en-UA">
+<html lang="en-UA" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <title>Capitoneo's site</title>
-    <link rel="stylesheet" href="/style/bootstrap.css" />
-    <link rel="stylesheet" href="/style/styles.css" />
-    <script src="/script/jquery-3.1.1.js"></script>
-    <script src="/script/bootstrap.js"></script>
-    <script src="/script/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style/bootstrap.css"/>
+    <link rel="stylesheet" href="./style/styles.css"/>
+    <title>capitoneo.github.io</title>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="page-header">
-                <h2>Capitoneo's site</h2>
+<nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
+    <div class="container px-3">
+        <a class="navbar-brand" href="./">capitoneo.github.io</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvas" aria-controls="offcanvas"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas"
+             aria-labelledby="offcanvasLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasLabel">Social Links</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
             </div>
-            <div>
-                <a href="./game/lze/map/turion.html">Level Zero Extraction: Turion Quest Map</a>
-            </div>
-            <div>
-                <a href="./game/lze/exithelper.html">Level Zero Extraction: Turion Elevator Solo Exit Helper</a>
-            </div>
-            <div>
-                <a href="./game/crossout/raidincomecalc.html">Crossout: Raid Calculator</a>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav flex-grow-1 justify-content-between">
+                    <li></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.twitch.tv/capitoneo">
+                        <svg class="bi" width="26" height="26" fill="currentColor">
+                            <use xlink:href="./img/bootstrap-icons-subset.svg#twitch"/>
+                        </svg>
+                        Twitch</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/@capitoneo">
+                        <svg class="bi" width="26" height="26" fill="currentColor">
+                            <use xlink:href="./img/bootstrap-icons-subset.svg#youtube"/>
+                        </svg>
+                        Youtube</a>
+                    </li>
+<!--                    <li class="nav-item"><a class="nav-link" href="#">-->
+<!--                        <svg class="bi" width="26" height="26" fill="currentColor">-->
+<!--                            <use xlink:href="./img/bootstrap-icons-subset.svg#discord"/>-->
+<!--                        </svg>-->
+<!--                        Discord</a>-->
+<!--                    </li>-->
+                    <li class="nav-item"><a class="nav-link" href="https://steamcommunity.com/id/capitoneo">
+                        <svg class="bi" width="26" height="26" fill="currentColor">
+                            <use xlink:href="./img/bootstrap-icons-subset.svg#steam"/>
+                        </svg>
+                        Steam</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.gog.com/u/Capitoneo">
+                        <svg class="bi" width="26" height="26" fill="currentColor">
+                            <use xlink:href="./img/bootstrap-icons-subset.svg#gog"/>
+                        </svg>
+                        GoG</a>
+                    </li>
+<!--                    <li class="nav-item"><a class="nav-link" href="#">-->
+<!--                        <svg class="bi" width="26" height="26" fill="currentColor">-->
+<!--                            <use xlink:href="./img/bootstrap-icons-subset.svg#ubisoft"/>-->
+<!--                        </svg>-->
+<!--                        Ubisoft</a>-->
+<!--                    </li>-->
+                    <li class="nav-item"><a class="nav-link" href="https://battlelog.battlefield.com/bfh/user/Capitoneo/">
+                        <svg class="bi" width="26" height="26" fill="currentColor">
+                            <use xlink:href="./img/bootstrap-icons-subset.svg#ea"/>
+                        </svg>
+                        EA</a>
+                    </li>
+                    <li></li>
+                </ul>
             </div>
         </div>
     </div>
-</div>
+</nav>
+<main>
+    <div class="container p-3">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">
+                        Hunt: Showdown 1986
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Ukrainian Translation</h5>
+                        <p class="card-text">We're asking developers to add Ukranian translation to
+                            Hunt: Showdown game. Please support this initiative by placing a thumb
+                            up
+                            reaction on official Discord server of Hunt: Showdown.</p>
+                    </div>
+                    <div class="card-footer border-0 bg-transparent pb-3">
+                        <a href="https://discord.com/channels/350201607788429323/524577494863708180/1284528865397702689"
+                           class="btn btn-primary">Vote here</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">
+                        Level Zero: Extraction
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Turion Quest Map</h5>
+                        <p class="card-text">Map contains location naming & markers for various
+                            points of interest including quest items.</p>
+                    </div>
+                    <div class="card-footer border-0 bg-transparent pb-3">
+                        <a href="./game/lze/map/turion.html" class="btn btn-primary">Open map</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">
+                        Level Zero: Extraction
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Turion Elevator Solo Exit Helper</h5>
+                        <p class="card-text">Small tool that helps to solve solo elevator exit
+                            puzzle.</p>
+                    </div>
+                    <div class="card-footer border-0 bg-transparent pb-3">
+                        <a href="./game/lze/exithelper.html" class="btn btn-primary">Open app</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="./script/bootstrap.min.js"></script>
+<script src="./script/script.js"></script>
 </body>
 </html>
